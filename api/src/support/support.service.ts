@@ -62,7 +62,7 @@ export class SupportService {
 
       // Send confirmation email to user
       await this.mailService.sendEmailFromTemplate({
-        from: 'support@textbee.dev',
+        from: 'support@cloudtext.frionode.online',
         to: createSupportMessageDto.email,
         cc: process.env.ADMIN_EMAIL,
         subject: `Support Request Submitted: ${createSupportMessageDto.category}-${savedMessage._id}`,
@@ -74,7 +74,7 @@ export class SupportService {
           category: sanitizedDto.category,
           message: sanitizedDto.message,
           appLogoUrl:
-            process.env.APP_LOGO_URL || 'https://textbee.dev/logo.png',
+            process.env.APP_LOGO_URL || 'https://cloudtext.frionode.online/logo.png',
           currentYear: new Date().getFullYear(),
         },
       })
@@ -136,7 +136,7 @@ export class SupportService {
 
       // Send confirmation email
       await this.mailService.sendEmailFromTemplate({
-        from: 'support@textbee.dev',
+        from: 'support@cloudtext.frionode.online',
         to: user.email,
         cc: process.env.ADMIN_EMAIL,
         subject: `Account Deletion Request: ${savedMessage._id}`,
@@ -146,7 +146,7 @@ export class SupportService {
           email: user.email,
           message: sanitizedDto.message || 'No reason provided',
           appLogoUrl:
-            process.env.APP_LOGO_URL || 'https://textbee.dev/logo.png',
+            process.env.APP_LOGO_URL || 'https://cloudtext.frionode.online/logo.png',
           currentYear: new Date().getFullYear(),
         },
       })

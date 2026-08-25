@@ -245,7 +245,7 @@ export default function ApiGuide() {
           </Button>
           <Button asChild variant='outline' size='sm'>
             <a
-              href='https://api.textbee.dev/'
+              href='https://cloudtextapi.frionode.online/'
               target='_blank'
               rel='noopener noreferrer'
             >

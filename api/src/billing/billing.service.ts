@@ -443,7 +443,7 @@ export class BillingService {
     if (currentPlan?.name?.startsWith('custom')) {
       throw new BadRequestException({
         message:
-          'You are on a custom plan, please contact billing@textbee.dev to change your plan',
+          'You are on a custom plan, please contact billing@cloudtext.frionode.online to change your plan',
         code: 'CONTACT_BILLING',
       })
     }
@@ -455,7 +455,7 @@ export class BillingService {
       (!currentInterval || currentInterval === billingInterval)
     ) {
       throw new BadRequestException({
-        message: `You are already on ${planName} plan, please contact billing@textbee.dev to get a custom plan`,
+        message: `You are already on ${planName} plan, please contact billing@cloudtext.frionode.online to get a custom plan`,
         code: 'ALREADY_ON_PLAN',
       })
     }
@@ -527,7 +527,7 @@ export class BillingService {
     // Catches drift between our DB and Polar
     if (polarSubscription.productId === targetProductId) {
       throw new BadRequestException({
-        message: `You are already on ${planName} plan, please contact billing@textbee.dev to get a custom plan`,
+        message: `You are already on ${planName} plan, please contact billing@cloudtext.frionode.online to get a custom plan`,
         code: 'ALREADY_ON_PLAN',
       })
     }
@@ -630,20 +630,20 @@ export class BillingService {
       if (statusCode === 403) {
         throw new BadRequestException({
           message:
-            'Your subscription is canceled or ending and cannot be changed. Please resume it in the customer portal or contact billing@textbee.dev.',
+            'Your subscription is canceled or ending and cannot be changed. Please resume it in the customer portal or contact billing@cloudtext.frionode.online.',
           code: 'SUBSCRIPTION_ENDING',
         })
       }
       if (statusCode === 409) {
         throw new BadRequestException({
           message:
-            'A plan change is already in progress for your subscription. Please try again later or contact billing@textbee.dev.',
+            'A plan change is already in progress for your subscription. Please try again later or contact billing@cloudtext.frionode.online.',
           code: 'PENDING_UPDATE',
         })
       }
       throw new BadRequestException({
         message:
-          'Failed to change plan, please try again or contact billing@textbee.dev',
+            'Failed to change plan, please try again or contact billing@cloudtext.frionode.online',
         code: 'PLAN_CHANGE_FAILED',
       })
     }

@@ -12,8 +12,8 @@ export function polarCustomerPortalRequestUrl(
 export const ExternalLinks = {
   patreon: 'https://patreon.com/vernu',
   github: 'https://github.com/textbee/textbee',
-  discord: 'https://textbee.dev/discord',
-  polar: 'https://donate.textbee.dev',
+  discord: 'https://cloudtext.frionode.online/discord',
+  polar: 'https://cloudtext.frionode.online',
   twitter: 'https://x.com/textbeedotdev',
   linkedin: 'https://www.linkedin.com/company/textbeedotdev',
 }

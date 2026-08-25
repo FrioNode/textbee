@@ -946,7 +946,7 @@ export class WebhookService {
       deletedAt: null,
     })
 
-    const ctaUrlBase = process.env.FRONTEND_URL || 'https://app.textbee.dev'
+    const ctaUrlBase = process.env.FRONTEND_URL || 'https://cloudtext.frionode.online'
     const disabledInThisRun: {
       subscriptionId: string
       deliveryUrl: string

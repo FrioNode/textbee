@@ -213,7 +213,7 @@ describe('SubscriptionInfo', () => {
 
     expect(
       screen.getByRole('link', { name: /Compare all plans/ })
-    ).toHaveAttribute('href', 'https://textbee.dev/pricing')
+    ).toHaveAttribute('href', 'https://cloudtext.frionode.online/pricing')
   })
 
   // The loading state used to be a 16px spinner alone in the content column,

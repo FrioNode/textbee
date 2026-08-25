@@ -1,17 +1,17 @@
 ![GitHub stars](https://img.shields.io/github/stars/textbee/textbee)
 ![License](https://img.shields.io/github/license/textbee/textbee)
 ![Release](https://img.shields.io/github/v/release/textbee/textbee)
-[![Discord](https://img.shields.io/discord/1236287182940016723?label=Discord&logo=discord)](https://textbee.dev/discord)
+[![Discord](https://img.shields.io/discord/1236287182940016723?label=Discord&logo=discord)](https://cloudtext.frionode.online/discord)
 
-# textbee.dev - android sms gateway
+# cloudtext.frionode.online - android sms gateway
 
 Send and receive SMS messages using your own Android phone - no Twilio, no per-message fees. Free, open-source, and self-hostable.
 
 The open-source SMS gateway for developers, automations, and AI agents. Manage SMS messages through a web dashboard, a REST API, or the [MCP server](#use-with-ai-agents-mcp) for AI agents. textbee is ideal for businesses, developers, and hobbyists looking for a reliable and cost-effective solution to automate SMS messaging.
 
-**Website:** [https://textbee.dev](https://textbee.dev?ref=gh-readme)
+**Website:** [https://cloudtext.frionode.online](https://cloudtext.frionode.online?ref=gh-readme)
 
-![textbee.dev landing page](.github/assets/landing-page.png)
+![cloudtext.frionode.online landing page](.github/assets/landing-page.png)
 
 
  
@@ -39,10 +39,10 @@ The open-source SMS gateway for developers, automations, and AI agents. Manage S
 
 ## Getting Started
  
-1. Go to [textbee.dev](https://textbee.dev) and register or login with your account
-2. Install the app on your Android phone from [textbee.dev/download](https://textbee.dev/download)
+1. Go to [cloudtext.frionode.online](https://cloudtext.frionode.online) and register or login with your account
+2. Install the app on your Android phone from [cloudtext.frionode.online/download](https://cloudtext.frionode.online/download)
 3. Open the app and grant the permissions for SMS
-4. Go to [textbee.dev/dashboard](https://textbee.dev/dashboard) and click register device / generate API key
+4. Go to [cloudtext.frionode.online/dashboard](https://cloudtext.frionode.online/dashboard) and click register device / generate API key
 5. Scan the QR code with the app or enter the API key manually
 6. You're ready to send SMS from the dashboard or from your application via the REST API
 
@@ -55,7 +55,7 @@ Messages go out through your default device, or otherwise the enabled device wit
 ```javascript
 const API_KEY = 'YOUR_API_KEY';
  
-await axios.post('https://api.textbee.dev/api/v1/gateway/send-sms', {
+await axios.post('https://cloudtextapi.frionode.online/api/v1/gateway/send-sms', {
   recipients: [ '+12025550123' ],
   message: 'Hello World!',
 }, {
@@ -71,7 +71,7 @@ import requests
 API_KEY = 'YOUR_API_KEY'
  
 requests.post(
-    'https://api.textbee.dev/api/v1/gateway/send-sms',
+   'https://cloudtextapi.frionode.online/api/v1/gateway/send-sms',
     json={
         'recipients': ['+12025550123'],
         'message': 'Hello World!',
@@ -84,7 +84,7 @@ requests.post(
 <details>
 <summary><b>curl</b></summary>
 ```bash
-curl -X POST "https://api.textbee.dev/api/v1/gateway/send-sms" \
+curl -X POST "https://cloudtextapi.frionode.online/api/v1/gateway/send-sms" \
   -H 'x-api-key: YOUR_API_KEY' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -101,7 +101,7 @@ Enable SMS receiving in the mobile app, then access incoming messages via the RE
 ```javascript
 const API_KEY = 'YOUR_API_KEY';
  
-await axios.get('https://api.textbee.dev/api/v1/gateway/messages?direction=received', {
+await axios.get('https://cloudtextapi.frionode.online/api/v1/gateway/messages?direction=received', {
   headers: { 'x-api-key': API_KEY },
 });
 ```
@@ -109,7 +109,7 @@ await axios.get('https://api.textbee.dev/api/v1/gateway/messages?direction=recei
 <details>
 <summary><b>curl</b></summary>
 ```bash
-curl -X GET "https://api.textbee.dev/api/v1/gateway/messages?direction=received" \
+curl -X GET "https://cloudtextapi.frionode.online/api/v1/gateway/messages?direction=received" \
   -H "x-api-key: YOUR_API_KEY"
 ```
  
@@ -131,7 +131,7 @@ The official [textbee MCP server](https://github.com/textbee/textbee-mcp) lets C
 }
 ```
 
-Three tools: `send_sms` (send to one or many recipients), `get_messages` (read replies and verification codes, check delivery status), and `list_devices`. Self-hosted instances work with `TEXTBEE_BASE_URL`. Details at [textbee.dev/mcp](https://textbee.dev/mcp?ref=gh-readme) and the [agent docs](https://textbee.dev/docs/agents/mcp?ref=gh-readme).
+Three tools: `send_sms` (send to one or many recipients), `get_messages` (read replies and verification codes, check delivery status), and `list_devices`. Self-hosted instances work with `TEXTBEE_BASE_URL`. Details at [cloudtext.frionode.online/mcp](https://cloudtext.frionode.online/mcp?ref=gh-readme) and the [agent docs](https://cloudtext.frionode.online/docs/agents/mcp?ref=gh-readme).
 
 ## Use Cases
  
@@ -159,7 +159,7 @@ Yes — messages are sent through your phone, so it needs to be powered on with 
 </details>
 <details>
 <summary><b>Is there a limit on the cloud-hosted version?</b></summary>
-See [textbee.dev](https://textbee.dev) for current plans and limits. You can always self-host for full control.
+See [cloudtext.frionode.online](https://cloudtext.frionode.online) for current plans and limits. You can always self-host for full control.
  
 </details>
 
@@ -184,7 +184,7 @@ See [textbee.dev](https://textbee.dev) for current plans and limits. You can alw
 
 1. Clone the repository and navigate to the Android project directory.
 2. Update the `google-services.json` file with your Firebase project configuration.
-3. Update every occurrence of `textbee.dev` with your own domain in the project.
+3. Update every occurrence of `cloudtext.frionode.online` with your own domain in the project.
 4. Build the app using Android Studio or the command line:
    ```bash
    ./gradlew assembleRelease
@@ -233,7 +233,7 @@ See [textbee.dev](https://textbee.dev) for current plans and limits. You can alw
    ```
 3. Configure `Caddy` to serve your web application and API. Example Caddyfile:
    ```
-   textbee.dev {
+   cloudtext.frionode.online {
        reverse_proxy /api/* localhost:3000
        reverse_proxy /* localhost:3001
    }
@@ -271,7 +271,7 @@ Contributions are welcome!
 
 Please feel free to [create an issue](https://github.com/textbee/textbee/issues/new) in the repository for any bug reports or feature requests. Make sure to provide a detailed description of the issue or feature you are requesting and properly label whether it is a bug or a feature request.
 
-Please note that if you discover any vulnerability or security issue, we kindly request that you refrain from creating a public issue. Instead, send an email detailing the vulnerability to contact@textbee.dev.
+Please note that if you discover any vulnerability or security issue, we kindly request that you refrain from creating a public issue. Instead, send an email detailing the vulnerability to contact@cloudtext.frionode.online.
 
 ## For support, feedback, and questions
-Feel free to reach out to us at contact@textbee.dev or [Join our Discord server](https://textbee.dev/discord)
+Feel free to reach out to us at contact@cloudtext.frionode.online or [Join our Discord server](https://cloudtext.frionode.online/discord)

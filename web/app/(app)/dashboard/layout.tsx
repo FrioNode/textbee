@@ -68,7 +68,7 @@ export default function DashboardLayout({
           <p className='text-xs text-muted-foreground'>
             Need help?{' '}
             <a
-              href='https://textbee.dev/quickstart'
+              href='https://cloudtext.frionode.online/quickstart'
               target='_blank'
               rel='noreferrer'
               className='font-medium text-primary hover:underline'

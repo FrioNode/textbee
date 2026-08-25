@@ -18,8 +18,8 @@ import { BillingNotificationType } from './schemas/billing-notification.schema'
  *   and can act calmly. The reached emails arrive when they are already stuck.
  */
 
-const PRICING_URL = 'https://textbee.dev/pricing'
-const ACCOUNT_URL = 'https://app.textbee.dev/dashboard/account'
+const PRICING_URL = 'https://cloudtext.frionode.online/pricing'
+const ACCOUNT_URL = 'https://cloudtext.frionode.online/dashboard/account'
 
 export const NOTIFICATION_SUBJECTS: Record<string, string> = {
   [BillingNotificationType.DAILY_LIMIT_APPROACHING]:
@@ -231,7 +231,7 @@ export function buildEmailContent(
         preheader: fallbackMessage.slice(0, 120),
         message: fallbackMessage,
         ctaLabel: 'Open dashboard',
-        ctaUrl: 'https://app.textbee.dev/dashboard',
+        ctaUrl: 'https://cloudtext.frionode.online/dashboard',
       }
   }
 }

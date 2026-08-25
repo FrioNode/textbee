@@ -36,7 +36,7 @@ export default function Footer() {
             className='h-5 w-5 rounded-full bg-white'
           />
           <span className='text-sm text-muted-foreground'>
-            © {new Date().getFullYear()} textbee.dev
+            © {new Date().getFullYear()} cloudtext.frionode.online
           </span>
         </div>
 

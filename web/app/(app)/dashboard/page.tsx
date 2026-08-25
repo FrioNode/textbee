@@ -103,7 +103,7 @@ export default function DashboardPage() {
             variant='ghost'
             size='sm'
             onClick={() => window.open(
-                'https://textbee.dev/quickstart',
+                'https://cloudtext.frionode.online/quickstart',
                 '_blank',
                 'noopener,noreferrer'
               )}

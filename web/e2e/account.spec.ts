@@ -102,7 +102,7 @@ test.describe('account settings (mocked API, no real backend)', () => {
 
     await expect(
       page.getByRole('link', { name: /Compare all plans/ })
-    ).toHaveAttribute('href', 'https://textbee.dev/pricing')
+    ).toHaveAttribute('href', 'https://cloudtext.frionode.online/pricing')
   })
 
   // Password managers key off autoComplete to tell the three password boxes

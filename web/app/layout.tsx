@@ -11,9 +11,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'textbee.dev - sms gateway - dashboard',
+  title: 'cloudtext.frionode.online - sms gateway - dashboard',
 
-  metadataBase: new URL('https://textbee.dev'),
+  metadataBase: new URL('https://cloudtext.frionode.online'),
 }
 
 export default async function RootLayout({ children }: PropsWithChildren) {

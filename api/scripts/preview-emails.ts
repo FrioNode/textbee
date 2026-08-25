@@ -20,7 +20,7 @@ const TEMPLATE_DIR = path.join(__dirname, '..', 'src', 'mail', 'templates')
 const PARTIAL_DIR = path.join(TEMPLATE_DIR, 'partials')
 const OUT_DIR = path.join(__dirname, '..', 'tmp', 'email-preview')
 
-const BRAND = 'textbee.dev'
+const BRAND = 'cloudtext.frionode.online'
 const YEAR = new Date().getFullYear()
 
 /** Meta as the billing service actually records it, per notification type. */
@@ -47,11 +47,11 @@ const SAMPLES: Record<string, Record<string, any>> = {
   },
   'verify-email': {
     name: 'Alex',
-    verificationLink: 'https://app.textbee.dev/verify?token=sample-token-value',
+    verificationLink: 'https://cloudtext.frionode.online/verify?token=sample-token-value',
   },
   'password-reset-request': {
     name: 'Alex',
-    resetLink: 'https://app.textbee.dev/reset-password?token=sample-token-value',
+    resetLink: 'https://cloudtext.frionode.online/reset-password?token=sample-token-value',
     otp: '482913',
   },
   'password-reset-success': { name: 'Alex' },
@@ -75,7 +75,7 @@ const SAMPLES: Record<string, Record<string, any>> = {
     deliveryUrl: 'https://example.com/hooks/textbee',
     failureCount: 42,
     ctaLabel: 'Review webhooks',
-    ctaUrl: 'https://app.textbee.dev/dashboard/webhooks',
+    ctaUrl: 'https://cloudtext.frionode.online/dashboard/webhooks',
   },
   'webhook-auto-disable-admin-summary': {
     title: 'Webhooks auto-disabled',
